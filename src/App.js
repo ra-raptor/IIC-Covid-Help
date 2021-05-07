@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import AboutPage from "./pages/AboutPage";
-import DataContextProvider from "./contexts/DataContextProvider";
 
 function App() {
   /*OxygenContextProvider is a context provider that has 
@@ -17,9 +16,7 @@ function App() {
   return (
     <>
       <Router>
-        <DataContextProvider>
-          <Route path="/" exact component={HomePage} />
-        </DataContextProvider>
+        <Route path="/" exact component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/login" component={LoginPage} />
       </Router>
